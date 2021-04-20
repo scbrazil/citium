@@ -4,6 +4,8 @@
   "description": "Software for presence of mind and emotional well-being.",
   "main": "index.js",
   "scripts": {
+    "watch": "webpack --progress --watch",
+    "server": "nodemon server/server.js",
     "start": "webpack serve --mode development --open --hot",
     "build": "webpack --mode production",
     "test": "test"
@@ -22,13 +24,25 @@
     "@material-ui/core": "^4.11.3",
     "@material-ui/icons": "^4.11.2",
     "@material-ui/styles": "^4.11.3",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "compression-webpack-plugin": "^7.1.2",
+    "core-js": "^3.10.1",
+    "cors": "^2.8.5",
+    "css-loader": "^5.2.1",
+    "dotenv": "^8.2.0",
+    "file-loader": "^6.2.0",
     "mongoose": "^5.12.3",
     "react": "^17.0.2",
+    "react-async-hook": "^3.6.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^5.2.0"
+    "react-router-dom": "^5.2.0",
+    "regenerator-runtime": "^0.13.7",
+    "style-loader": "^2.0.0",
+    "zlib": "^1.0.5"
   },
   "devDependencies": {
     "@babel/core": "^7.13.15",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.13.15",
     "@babel/preset-react": "^7.13.13",
     "babel-loader": "^8.2.2",

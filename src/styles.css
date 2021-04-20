@@ -1,0 +1,76 @@
+body {
+  /* background-color: #2d2d2d; */
+  /* background-color:blue; */
+}
+
+.bg-image {
+  /* background-image: url("https://images.pexels.com/photos/753639/pexels-photo-753639.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"); */
+  background-image: url("./assets/images/rome-evening-1-md.jpg");
+
+  /* background-color:yellow; */
+
+  /* blur image */
+  -webkit-filter: blur(8px);
+  filter: blur(8px);
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  /* background-position: center; */
+  background-position: top 300px;
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+}
+
+.navBar {
+  opacity: 0.5;
+}
+
+.appContent {
+  /* position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  margin-left: 20px;
+  margin-right: 20px; */
+  overflow: auto;
+  position: relative;
+}
+.appContent::before {
+  content: '';
+  position: fixed;
+  left: -5%;
+  right: -5%;
+  top: -5%;
+  z-index: -1;
+
+  display: block;
+  background-image: url("./assets/images/rome-evening-1-md.jpg");
+  width: 120%;
+  height: 110%;
+
+  -webkit-filter: blur(5px);
+  -moz-filter: blur(5px);
+  -o-filter: blur(5px);
+  -ms-filter: blur(5px);
+  filter: blur(5px);
+}
+
+.test {
+  font-family: 'Lora', serif;
+  color: #939393;
+  font-size: 52px;
+}
+
+.logoMobile {
+  font-family: 'Montserrat', serif;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.logoDesktop {
+  font-family: 'Montserrat', 'Roboto';
+  font-size: 44px;
+  font-weight: 300;
+}
