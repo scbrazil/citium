@@ -84,7 +84,7 @@ const NavBar = (props) => {
   const isMobile = useMediaQuery(theme.breakpoints.down("xs"));
   const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
-  const { openLoginModal } = useContext(AppContext);
+  const { handleLoginStatus, loggedIn, loginSwitch, openLoginModal } = useContext(AppContext);
 
   const handleMenu = (event) => {
     setAnchorEl(event.currentTarget);
@@ -95,10 +95,15 @@ const NavBar = (props) => {
     setAnchorEl(null);
   };
 
-  const handleLoginModalOpen = () => {
-    // history.push(pageUrl);
-    openLoginModal();
+  const handleLoginOpen = (event) => {
+    event.preventDefault()
+    loginSwitch(true);
+    openLoginModal(true);
   };
+
+  // const handleLogout = () => {
+  //   handleLoginStatus(false);
+  // };
 
   const menuItems = [
     {
@@ -222,20 +227,35 @@ const NavBar = (props) => {
                 <Grid item xs={4} />
                 <Grid item xs={4}>
                   <Grid container>
-                    <Grid item xs={4} className={classes.menuTemp}>
+                    <Grid item xs={3} className={classes.menuTemp}>
                       <Link to='/' className={classes.navBarLinks}>
                         <Typography variant='subtitle1'>Home</Typography>
                       </Link>
                     </Grid>
-                    <Grid item item xs={4} className={classes.menuTemp}>
+                    <Grid item item xs={3} className={classes.menuTemp}>
                       <Link to='/about' className={classes.navBarLinks}>
                         <Typography variant='subtitle1'>About</Typography>
                       </Link>
                     </Grid>
-                    <Grid item xs={4} className={classes.menuTemp}>
-                      <Link to='/login' className={classes.navBarLinks}>
-                        <Typography variant='subtitle1'>Login</Typography>
+                    <Grid item item xs={3} className={classes.menuTemp}>
+                      <Link to='/profile' className={classes.navBarLinks}>
+                        <Typography variant='subtitle1'>Profile</Typography>
                       </Link>
+                    </Grid>
+                    <Grid item xs={3} className={classes.menuTemp}>
+                      {!loggedIn ? (
+                        <Link to='' onClick={e => { handleLoginOpen(e) }} className={classes.navBarLinks}>
+                          <Typography variant='subtitle1'>
+                            Login
+                          </Typography>
+                        </Link>
+                      ) : (
+                        <Link to='' onClick={e => { handleLoginStatus(false) }} className={classes.navBarLinks}>
+                          <Typography variant='subtitle1'>
+                            Logout
+                          </Typography>
+                        </Link>
+                      )}
                     </Grid>
                   </Grid>
                 </Grid>

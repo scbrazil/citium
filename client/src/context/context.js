@@ -6,7 +6,9 @@ export const AppContext = createContext();
 export const AppProvider = ({ children }) => {
   const [entrySubmittedStatus, setEntrySubmitted] = useState(false);
   const [submittedEntry, setSubmittedEntry] = useState('');
-  const [modalOpen, setModalOpen] = useState(false);
+  const [openLogin, setOpenLogin] = useState(false);
+  const [loginDialog, setLoginDialog] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(false);
 
   const submissionStatus = (entryStatus) => {
     setEntrySubmitted(entryStatus);
@@ -16,17 +18,29 @@ export const AppProvider = ({ children }) => {
     setSubmittedEntry(entry);
   }
 
-  const openLoginModal = () => {
-    setModalOpen(true);
+  const openLoginModal = (status) => {
+    setOpenLogin(status);
+  }
+
+  const loginSwitch = (status) => {
+    setLoginDialog(status);
+  }
+
+  const handleLoginStatus = () => {
+    setLoggedIn(true);
   }
 
   return (
     <AppContext.Provider
       value={{
         entrySubmittedStatus,
-        modalOpen,
+        loggedIn,
+        loginDialog,
+        openLogin,
         submittedEntry,
+        handleLoginStatus,
         openLoginModal,
+        loginSwitch,
         setDailyEntry,
         submissionStatus
       }}

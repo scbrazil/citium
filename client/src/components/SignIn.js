@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   Card,
@@ -16,6 +16,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+import axios from 'axios';
 
 const theme = createMuiTheme({
   overrides: {
@@ -36,10 +37,6 @@ const theme = createMuiTheme({
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: "6.5em",
-    // '& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline': {
-    //   borderColor: '#575757',
-    //   background: '#fff',
-    // }
     '& .MuiTextField-root': {
       backgroundColor: '#000',
       color: '#000'
@@ -53,14 +50,12 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   cardStylesRegister: {
-    // width: '350px',
     backgroundColor: '#2d2d2d',
     padding: "0.5em 2em 2em 2em",
     margin: '1em 1em 1em 1em',
     opacity: '0.95'
   },
   cardStylesLogin: {
-    // width: '400px',
     backgroundColor: '#2d2d2d',
     padding: "0.5em 2em 2.7em 2em",
     // margin: '1em 13em 1em 3em',
@@ -74,6 +69,14 @@ const useStyles = makeStyles((theme) => ({
 
 const SignIn = () => {
   const classes = useStyles();
+  const [ loginEmail, setLoginEmail ] = useState('');
+  const [ loginPassword, setLoginPassword ] = useState('');
+  const [ err, setErr ] = useState(null);
+
+  const handleloginSubmit = event => {
+    event.preventDefault;
+    userLogin();
+  }
 
   return (
     <MuiThemeProvider theme={theme}>
@@ -86,7 +89,10 @@ const SignIn = () => {
               <Typography component="h1" variant="h5" style={{ color: "#fff" }}>
                 Sign In
               </Typography>
-              <form noValidate>
+              <form noValidate onSubmit={e => {
+                e.preventDefault()
+                userLogin(loginEmail, loginPassword, err)
+              }}>
                 <TextField
                   className={classes.inputFields}
                   variant="filled"
@@ -99,6 +105,9 @@ const SignIn = () => {
                   autoComplete="email"
                   autoFocus
                   size="small"
+                  onInput={(e) => {
+                    setLoginEmail(e.target.value);
+                  }}
                 />
                 <TextField
                   className={classes.inputFields}
@@ -110,6 +119,9 @@ const SignIn = () => {
                   name="password"
                   autoComplete="current-password"
                   size="small"
+                  onInput={(e) => {
+                    setLoginPassword(e.target.value);
+                  }}
                 />
                 <FormControlLabel
                   control={
@@ -129,6 +141,9 @@ const SignIn = () => {
                   type="submit"
                   fullWidth
                   variant="contained"
+                  // onClick={(event) => {
+                  //   handleLoginSubmit(event);
+                  // }}
                 >
                   Sign In
                 </Button>
@@ -239,5 +254,21 @@ const SignIn = () => {
     </MuiThemeProvider>
   );
 };
+
+const userLogin = (email, password, setErr) => {
+  axios
+    .post(`/api/auth/login?email=${email}&password=${password}`, null, {
+      withCredentials: true
+    })
+    .then(() => {
+      alert(`${email} logged in successfully`);
+      window.location.reload(false);
+    })
+    .catch((err) => {
+      alert(`Login for ${email} failed.`);
+      console.error('Login failed: ');
+      // setErr(err.response.data);
+    })
+}
 
 export default SignIn;

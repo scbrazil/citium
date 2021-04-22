@@ -48,20 +48,10 @@ const DailyQuote = () => {
 
   async function getQuote() {
     try {
-      const res = await axios.get("/random-quote");
+      const res = await axios.get("/stoic-quote");
       setDailyQuote(res.data);
     } catch (error) {
       console.log(error);
-      setError(error.response.data.error);
-    }
-  }
-
-  async function getMostWanted() {
-    try {
-      const res = await axios.get("/mostwanted");
-      setMostWanted(res.data);
-    } catch (error) {
-      console.log("Most wanted error: ", error);
       setError(error.response.data.error);
     }
   }

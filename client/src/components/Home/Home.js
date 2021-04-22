@@ -1,11 +1,12 @@
 import React, { Component, Fragment, useContext, useState } from "react";
 import { AppContext } from "../../context/context.js";
 import Link from "react-router-dom";
-import { Card, Grid, makeStyles } from "@material-ui/core";
+import { Card, Grid, makeStyles, Modal } from "@material-ui/core";
 import DailyQuote from "./DailyQuote.js";
 import JournalForm from "./JournalForm.js";
 import Timer from "./Timer.js";
-import DailyJournal from './DailyJournal.js'
+import DailyJournal from './DailyJournal.js';
+import LoginRegistrationModal from '../global/LoginRegistration/LoginRegistrationModal.js';
 
 const useStyles = makeStyles((theme) => ({
   homeStyles: {

@@ -12,7 +12,7 @@ import Register from './Register';
 
 const LoginModal = () => {
 
-  const { modalOpen, openLoginModal } = useContext(AppContext);
+  const { openLogin, openLoginModal } = useContext(AppContext);
 
   const handleLoginModalClose = () => {
     openLoginModal(false);
@@ -21,7 +21,7 @@ const LoginModal = () => {
   return (
     <div>
       <Modal
-        open={modalOpen}
+        open={true}
         close={handleLoginModalClose}
       >
         <Grid container>
