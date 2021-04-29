@@ -39,12 +39,6 @@ const UserSchema = new Schema(
       required: true
     },
     third_party_auth: [ThirdPartyProviderSchema],
-    firstName: {
-      type: String
-    },
-    lastName: {
-      type: String
-    },
     journalEntries: [
       {
         type: mongoose.Schema.Types.ObjectId,

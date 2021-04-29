@@ -55,8 +55,6 @@ const register_login = async (req, res, next, isNewUser) => {
       //   { firstName: req.query.firstName},
       //   { new: true }
       // );
-      console.log(user);
-
 
       // return res.status(200).send({ success: `${user.id} logged in.` });
       return res.status(200).send(user);

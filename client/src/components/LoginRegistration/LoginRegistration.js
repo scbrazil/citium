@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { AppContext } from "../../../context/context.js";
+import React, { useContext, useState } from 'react';
+import { AppContext } from '../../context/context.js';
 import {
   Container,
   Dialog,
@@ -10,12 +10,12 @@ import {
   Modal,
   Paper,
   Typography,
-} from "@material-ui/core";
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
+} from '@material-ui/core';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 
 const useStyles = makeStyles((theme) => ({
   dialogStyles: {
-    align: "center",
+    align: 'center',
   },
 }));
 
@@ -28,12 +28,11 @@ const LoginRegistrationModal = ({ children }) => {
   };
 
   return (
-    // <MuiThemeProvider theme={theme}>
     <Dialog
       className={classes.dialogStyles}
       open={openLogin}
       onClose={handleClose}
-      maxWidth="xs"
+      maxWidth='xs'
     >
       {openLogin ? (
         <DialogTitle>
@@ -50,7 +49,6 @@ const LoginRegistrationModal = ({ children }) => {
         </>
       </DialogContent>
     </Dialog>
-    // </MuiThemeProvider>
   );
 };
 

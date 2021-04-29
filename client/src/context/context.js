@@ -1,5 +1,7 @@
-import React, { createContext, useEffect, useState } from "react";
-import axios from "axios";
+import React, { createContext, useEffect, useState } from 'react';
+import { useMediaQuery } from '@material-ui/core';
+import axios from 'axios';
+import Theme from '../Theme.js';
 
 export const AppContext = createContext();
 
@@ -9,9 +11,12 @@ export const AppProvider = ({ children }) => {
   const [openLogin, setOpenLogin] = useState(false);
   const [loginDialog, setLoginDialog] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
+  const [showSplash, setShowSplash] = useState(false);
+  const isMobile = useMediaQuery(Theme.breakpoints.down('xs'));
 
   const submissionStatus = (entryStatus) => {
     setEntrySubmitted(entryStatus);
+
   };
 
   const setDailyEntry = (entry) => {
@@ -30,15 +35,22 @@ export const AppProvider = ({ children }) => {
     setLoggedIn(true);
   }
 
+  const handleSplash = () => {
+    setShowSplash(false);
+  }
+
   return (
     <AppContext.Provider
       value={{
         entrySubmittedStatus,
+        isMobile,
         loggedIn,
         loginDialog,
         openLogin,
+        showSplash,
         submittedEntry,
         handleLoginStatus,
+        handleSplash,
         openLoginModal,
         loginSwitch,
         setDailyEntry,

@@ -1,5 +1,5 @@
-import React, { useContext, useState } from "react";
-import { AppContext } from "../../../context/context.js";
+import React, { useContext, useState } from 'react';
+import { AppContext } from '../../context/context.js';
 import {
   Button,
   Card,
@@ -15,22 +15,21 @@ import {
   Paper,
   TextField,
   Typography,
-} from "@material-ui/core";
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import axios from "axios";
+} from '@material-ui/core';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    paddingBottom: "1em",
+    paddingBottom: '1em',
   },
   registerButton: {
-    // marginTop: "0em",
-    backgroundColor: "#9292e1",
-    "&:hover": {
-      backgroundColor: "#7171ae",
-      color: "#ffffff",
+    backgroundColor: '#9292e1',
+    '&:hover': {
+      backgroundColor: '#7171ae',
+      color: '#ffffff',
     },
-    margin: "0.3em 5em 0em 5em",
+    // margin: '0.3em 5em 0em 5em',
   },
 }));
 
@@ -79,19 +78,19 @@ const Register = () => {
         }}
       >
         <Grid container spacing={2}>
-          <Grid item xs={12} sm={6}>
+          {/* <Grid item xs={12} sm={6}>
             <TextField
               className={classes.inputFields}
-              autoComplete="fname"
-              name="firstName"
-              variant="filled"
-              // margin="dense"
+              autoComplete='fname'
+              name='firstName'
+              variant='filled'
+              // margin='dense'
               required
               fullWidth
-              id="firstName"
-              label="First Name"
+              id='firstName'
+              label='First Name'
               autoFocus
-              size="small"
+              size='small'
               onInput={(e) => {
                 setFirstName(e.target.value);
               }}
@@ -100,32 +99,32 @@ const Register = () => {
           <Grid item xs={12} sm={6}>
             <TextField
               className={classes.inputFields}
-              variant="filled"
-              // margin="dense"
+              variant='filled'
+              // margin='dense'
               required
               fullWidth
-              id="lastName"
-              label="Last Name"
-              name="lastName"
-              autoComplete="lname"
-              size="small"
+              id='lastName'
+              label='Last Name'
+              name='lastName'
+              autoComplete='lname'
+              size='small'
               onInput={(e) => {
                 setLastName(e.target.value);
               }}
             />
-          </Grid>
+          </Grid> */}
           <Grid item xs={12}>
             <TextField
               className={classes.inputFields}
-              variant="filled"
+              variant='filled'
               // margin='dense'
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
-              size="small"
+              id='email'
+              label='Email Address'
+              name='email'
+              autoComplete='email'
+              // size='small'
               onInput={(e) => {
                 setEmail(e.target.value);
               }}
@@ -134,16 +133,16 @@ const Register = () => {
           <Grid item xs={12}>
             <TextField
               className={classes.inputFields}
-              variant="filled"
+              variant='filled'
               // margin='dense'
               required
               fullWidth
-              name="password"
-              label="Password"
-              type="password"
-              id="password"
-              autoComplete="current-password"
-              size="small"
+              name='password'
+              label='Password'
+              type='password'
+              id='password'
+              autoComplete='current-password'
+              // size='small'
               onInput={(e) => {
                 setPassword(e.target.value);
               }}
@@ -152,16 +151,16 @@ const Register = () => {
           <Grid item xs={12}>
             <TextField
               className={classes.inputFields}
-              variant="filled"
+              variant='filled'
               // margin='dense'
               required
               fullWidth
-              name="confirm-password"
-              label="Confirm Password"
-              type="password"
-              id="confirm-password"
-              autoComplete="current-password"
-              size="small"
+              name='confirm-password'
+              label='Confirm Password'
+              type='password'
+              id='confirm-password'
+              autoComplete='current-password'
+              // size='small'
               onInput={(e) => {
                 setConfirmPassWord(e.target.value);
               }}
@@ -169,18 +168,17 @@ const Register = () => {
           </Grid>
           <Button
             className={classes.registerButton}
-            // backgroundColor="black"
-            type="submit"
+            type='submit'
             fullWidth
-            variant="contained"
-            size="large"
+            variant='contained'
+            size='large'
             style={{
               marginBottom: '0.5em',
             }}
           >
             Submit
           </Button>
-          <Grid container direction="column">
+          <Grid container direction='column'>
             {passwordMatch ? (
               <div></div>
             ) : (
@@ -197,10 +195,10 @@ const Register = () => {
             <Grid item xs>
               <Link
                 onClick={e => { handleLoginSwitch(e) }}
-                variant="body2"
+                variant='body2'
                 style={{
-                  color: "white",
-                  paddingRight: "0.7em",
+                  color: 'white',
+                  paddingRight: '0.7em',
                 }}
               >
                 Already have an account? Login here.
@@ -229,7 +227,5 @@ const registerUser = (email, password, firstName, lastName, handleClose, handleL
       console.log(`Registration failed: ${err.response.data}`);
     })
 }
-
-// firstName=${firstName}&lastName=${lastName}&
 
 export default Register;

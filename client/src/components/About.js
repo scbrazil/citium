@@ -5,7 +5,7 @@ import {
   makeStyles,
   Paper,
   Typography
-} from "@material-ui/core";
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -14,7 +14,8 @@ const useStyles = makeStyles((theme) => ({
   },
   aboutContainer: {
     color: '#fff',
-    backgroundColor: '#2d2d2d',
+    // backgroundColor: '#2d2d2d',
+    background: 'linear-gradient(to bottom right, rgba(6.3, 15.5, 40.8, 0.2), 0.1%, #25262c, 95%, rgba(21.6, 18.4, 40.8, 0.2))',
     elevation: '0',
     padding: '1em 2em 2em 2em',
     opacity: '0.95'
@@ -33,7 +34,6 @@ const About = () => {
         <Grid item xs={1} sm={3} />
         <Grid item xs={10} sm={6}>
           <Paper className={classes.aboutContainer}>
-            {/* <Card> */}
               <Typography className={classes.aboutBody} variant='body1'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
               </Typography>
@@ -43,7 +43,15 @@ const About = () => {
               <Typography className={classes.aboutBody} variant='body1'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
               </Typography>
-            {/* </Card> */}
+              <Typography className={classes.aboutBody} variant='body1'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </Typography>
+              <Typography className={classes.aboutBody} variant='body1'>
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              </Typography>
+              <Typography className={classes.aboutBody} variant='body1'>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </Typography>
           </Paper>
         </Grid>
         <Grid item xs={1} sm={3} />

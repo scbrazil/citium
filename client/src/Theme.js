@@ -10,7 +10,19 @@ const Theme = createMuiTheme({
       main: "#0f0",
     },
   },
+  input: {
+    "&::placeholder": {
+      color: 'blue'
+    }
+  },
   overrides: {
+    MuiInput: {
+      input: {
+        "&::placeholder": {
+          color: 'blue'
+        }
+      }
+    },
     MuiTextField: {
       root: {
         "& .MuiTextField-root": {

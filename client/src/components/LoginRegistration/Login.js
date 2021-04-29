@@ -1,5 +1,6 @@
-import React, { useContext, useState } from "react";
-import { AppContext } from '../../../context/context.js';
+import React, { useContext, useState } from 'react';
+import { AppContext } from '../../context/context.js';
+import { AuthContext } from '../../context/authContext.js';
 import {
   Button,
   Card,
@@ -15,36 +16,32 @@ import {
   Paper,
   TextField,
   Typography,
-} from "@material-ui/core";
-import { createMuiTheme, MuiThemeProvider } from "@material-ui/core/styles";
-import { AuthContext } from '../../../context/authContext.js';
-import axios from "axios";
+} from '@material-ui/core';
+import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
+import axios from 'axios';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: '1em',
-    paddingBottom: "1em",
+    paddingBottom: '1em',
   },
   loginButton: {
-    // marginTop: "0em",
-    backgroundColor: "#9292e1",
-    "&:hover": {
-      backgroundColor: "#7171ae",
-      color: "#ffffff",
+    backgroundColor: '#9292e1',
+    '&:hover': {
+      backgroundColor: '#7171ae',
+      color: '#ffffff',
     },
-    margin: "0em 0em 0em 0em",
+    margin: '0em 0em 0em 0em',
   },
 }));
 
 const Login = () => {
   const classes = useStyles();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const [err, setErr] = useState(null);
   const [isLoggedIn, setLoggedIn] = useState(false);
   const { handleLoginStatus, loginSwitch, openLoginModal } = useContext(AppContext);
-  const { getUser } = useContext(AuthContext);
-
 
   const handleLoginSubmit = (event) => {
     event.preventDefault()
@@ -61,7 +58,7 @@ const Login = () => {
   }
 
   if (isLoggedIn) {
-    return <Redirect to="/" />;
+    return <Redirect to='/' />;
   }
 
   return (
@@ -77,70 +74,67 @@ const Login = () => {
           <Grid item xs={12}>
             <TextField
               className={classes.inputFields}
-              variant="filled"
-              // margin="dense"
+              variant='filled'
+              // margin='dense'
               required
               fullWidth
-              id="email"
-              label="Email Address"
-              name="email"
-              autoComplete="email"
+              id='email'
+              label='Email Address'
+              name='email'
+              autoComplete='email'
               autoFocus
               onInput={(e) => {
                 setEmail(e.target.value);
               }}
-              size="medium"
+              size='medium'
             />
           </Grid>
           <Grid item xs={12}>
             <TextField
               className={classes.inputFields}
-              variant="filled"
-              // margin="dense"
+              variant='filled'
+              // margin='dense'
               fullWidth
-              id="password"
-              label="Password"
-              name="password"
-              autoComplete="current-password"
+              id='password'
+              label='Password'
+              name='password'
+              autoComplete='current-password'
               onInput={(e) => {
                 setPassword(e.target.value);
               }}
-              size="small"
+              size='small'
             />
           </Grid>
           <Grid item xs={12}>
             <FormControlLabel
               control={
                 <Checkbox
-                  value="remember"
-                  color="secondary"
-                  labelstyle={{ color: "white" }}
-                  iconstyle={{ fill: "white" }}
-                  size="small"
+                  value='remember'
+                  color='secondary'
+                  labelstyle={{ color: 'white' }}
+                  iconstyle={{ fill: 'white' }}
+                  size='small'
                 />
               }
-              label={<span style={{ color: "#ffffff" }}>Remember me</span>}
+              label={<span style={{ color: '#ffffff' }}>Remember me</span>}
             />
             <Button
               className={classes.loginButton}
-              type="submit"
+              type='submit'
               fullWidth
-              variant="contained"
-              size="large"
+              variant='contained'
+              size='large'
               style={{
                 marginBottom: '0.5em',
               }}
-              // onClick={(event) => {
-              //   handleLoginSubmit(event);
-              // }}
             >
               Sign In
             </Button>
             <Grid container direction='row'>
               <Grid item xs>
                 <Link
-                  href="#"
-                  variant="body2"
+                  href='#'
+                  variant='body2'
                   style={{
                     color: 'white',
                   }}>
@@ -169,17 +163,17 @@ const userLogin = (email, password, handleClose, handleLoginStatus, setErr) => {
     .post(`/api/auth/login?email=${email}&password=${password}`, null, {
       withCredentials: true
     })
-    .then(user => {
-      getUser(user);
-      setLoggedIn(true);
+    .then(res => {
+      handleLoginStatus(true);
       handleClose();
       alert(`${email} logged in successfully`);
       window.location.reload(false);
+      console.log('login user: ', res.data)
+      localStorage.setItem('userData', JSON.stringify(res));
     })
     .catch((err) => {
       alert(`Login for ${email} failed.`);
       console.error('Login failed: ', err);
-      // setErr(err.response.data);
     })
 }
 

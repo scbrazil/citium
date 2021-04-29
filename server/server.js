@@ -67,17 +67,15 @@ const isAuthenticated = (req, res, next) => {
   else return res.status(401).send('User is not authenticated.');
 };
 
-app.get('/checkauth', isAuthenticated, function (req, res) {
-  delete req.user._doc.password;
-  Subscription.findOne({ _id: req.user.subscriptionTier })
-    .then(subscription => {
-      req.user._doc.subscription = subscription;
-      res.status(200).send(req.user);
-    })
-    .catch(err => {
-      console.error(err);
-      res.status(400).send(req.user);
-    });
+app.get('/checkauth', isAuthenticated, async (req, res) => {
+  console.log('/checkauth req: ', req);
+  try {
+    await delete req.user._doc.password;
+    res.status(200).send(req.user);
+  } catch (error) {
+    console.error(error);
+    res.status(400).send('checkauth route failed: ', err);
+  }
 });
 
 
