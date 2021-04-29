@@ -1,23 +1,21 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-const JournalSchema = new Schema (
+const FavoriteQuotesSchema = new Schema (
   {
-    created: {
-      type: Date,
-      default: Date.now,
+    body: {
+      type: String,
       required: true
     },
-    body: {
+    author: {
       type: String,
       required: true
     },
     user: {
       type: mongoose.Schema.Types.ObjectId,
-      ref: 'User',
-      required: true
+      ref: 'User'
     }
   }
 );
 
-module.exports = Journal = mongoose.model('Journal', JournalSchema);
+module.exports = FavoriteQuotes = mongoose.model('FavoriteQuote', FavoriteQuotesSchema);

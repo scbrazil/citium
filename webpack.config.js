@@ -5,7 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // const zlib = require('zlib');
 
 module.exports = {
-  entry: ['@babel/polyfill', path.join(__dirname, './src/index.js')],
+  entry: ['@babel/polyfill', path.join(__dirname, '/client/src/index.js')],
   output: {
     filename: 'bundle.js',
     path: path.join(__dirname, '/dist'),
@@ -70,7 +70,7 @@ module.exports = {
     // new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       title: 'Citium',
-      template: './src/index.html',
+      template: './client/src/index.html',
     }),
   ],
   mode: 'development',
