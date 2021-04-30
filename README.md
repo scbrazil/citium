@@ -18,28 +18,32 @@
 
 <p><strong>Key Features:</strong></p>
 
-<ul>
-  <li>Calming meditative environment.</li>
-  <li>Short journal entries saved for future reflection.</li>
-  <li>Randomly retrieved thoughts of Stoic philosophers.</li>
-  <li>Increase passive, no pressure Level with each meditation.</li>
-  <li>Track your meditation consistency and statistics.</li>
-  <li>Easy registration and login process.</li>
-  <li>Tranquil, neutral styling.</li>
-  <li>Automatically adjusted for large and mobile screens.</li
-</ul>
+<p>
+  <ul>
+    <li>Calming meditative environment.</li>
+    <li>Short journal entries saved for future reflection.</li>
+    <li>Randomly retrieved thoughts of Stoic philosophers.</li>
+    <li>Increase passive, no pressure Level with each meditation.</li>
+    <li>Track your meditation consistency and statistics.</li>
+    <li>Easy registration and login process.</li>
+    <li>Tranquil, neutral styling.</li>
+    <li>Automatically adjusted for large and mobile screens.</li
+  </ul>
+</p>
 
 <p><strong>Technology:</strong></p>
 
-<ul>
-  <li>React employing context</li>
-  <li>React Router DOM for simplified navigation</li>
-  <li>Express.js</li>
-  <li>RESTful API</li>
-  <li>MongoDB</li>
-  <li>Mongoose</li>
-  <li>Material-UI components and design principles</li>
-  <li>Customized Bootstrap components</li>
-  <li>Passpost.js authentication with hashed encryption/decryption</li>
-  <li>Babel with configured Webpack</li>
-</ul>
+<p>
+  <ul>
+    <li>React employing context</li>
+    <li>React Router DOM for simplified navigation</li>
+    <li>Express.js</li>
+    <li>RESTful API</li>
+    <li>MongoDB</li>
+    <li>Mongoose</li>
+    <li>Material-UI components and design principles</li>
+    <li>Customized Bootstrap components</li>
+    <li>Passpost.js authentication with hashed encryption/decryption</li>
+    <li>Babel with configured Webpack</li>
+  </ul>
+</p>
