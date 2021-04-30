@@ -65,13 +65,9 @@
     <td>
       <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
       <img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/>
-      <img alt="Passport.js" src"https://img.shields.io/badge/-Passport.js-34E27A.svg?style=for-the-badge&logo=passport&logoColor=white" />
       <img alt="Material-UI" src="https://img.shields.io/badge/-MaterialUI-0081CB.svg?style=for-the-badge&logo=material-ui&logoColor=white" />
+      <img alt="Passport.js" src="https://img.shields.io/badge/-Passport.js-34E27A.svg?style=for-the-badge&logo=passport&logoColor=white" />
     </td>
-  </tr>
-  <tr>
-    <td>Hosting</td>
-
   </tr>
   <tr>
     <td>Databases</td>
