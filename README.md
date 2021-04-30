@@ -1,7 +1,7 @@
 <p align="center">
-  <h2 align="center">CITIUM</h3>
+  <h1 align="center">CITIUM</h3>
   
-  <p>
+  <p align="center">
     <a href="https://raw.githubusercontent.com/scbrazil/citium/main/client/src/assets/images/citium-demo.webp?raw=true">
       Demo
     </a>  
