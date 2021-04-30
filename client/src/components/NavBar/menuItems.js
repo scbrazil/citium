@@ -1,3 +1,14 @@
+import { useContext } from 'react';
+import { AppContext } from '../../context/context.js';
+// import { handleLoginOpen } from './NavBarMobile.js';
+const { loginSwitch, openLoginModal } = useContext(AppContext);
+
+// export const handleLoginOpen = (event) => {
+//   event.preventDefault();
+//   loginSwitch(true);
+//   openLoginModal(true);
+// };
+
 const menuItems = [
   {
     menuItem: 'Home',
@@ -31,4 +42,3 @@ const menuItems = [
   },
 ];
 
-module.exports = menuItems;

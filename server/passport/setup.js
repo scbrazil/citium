@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const User = require('../models/UserModel.js');
 const passport = require('passport');
+const mongoose = require('mongoose');
 const LocalStrategy = require('passport-local').Strategy;
 const GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
 
@@ -33,8 +34,9 @@ passport.use(
         bcrypt.genSalt(12, (err, salt) => {
           bcrypt.hash(newUser.password, salt, (err, hash) => {
             if (err) throw err;
-            newUser.firstName = req.body.firstName;
-            newUser.lastName = req.body.lastName;
+            newUser.progress = req.body.progress;
+            // newUser.firstName = req.body.firstName;
+            // newUser.lastName = req.body.lastName;
             newUser.password = hash;
             newUser.username = email;
             newUser

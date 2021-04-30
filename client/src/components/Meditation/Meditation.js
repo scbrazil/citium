@@ -5,6 +5,8 @@ import { Card, Grid, makeStyles, Paper } from "@material-ui/core";
 import DailyJournal from "./DailyJournal.js";
 import DailyQuote from "./DailyQuote";
 import Ambience from "./Ambience.js";
+import Progress from './Progress.js';
+import ProgressMobile from './ProgressMobile.js';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,22 +26,23 @@ const useStyles = makeStyles((theme) => ({
     align: "center",
   },
   lowerPaper: {
-    marginTop: "4em",
+    marginTop: "6em",
   },
 }));
 
 const Meditation = () => {
   const classes = useStyles();
+  const { isMobile } = useContext(AppContext);
 
   return (
     <div className={classes.root}>
       <Grid container direction="row">
-        <Grid item xs={1} md={1} />
-        <Grid item xs={10} md={10}>
+        <Grid item xs={1} md={2} />
+        <Grid item xs={10} md={8}>
           <Paper className={classes.paperStyles}>
             <Grid container>
               <Grid item xs={12} style={{ align: 'center' }}>
-              <DailyQuote />
+                <DailyQuote />
               </Grid>
             </Grid>
             <div>
@@ -49,17 +52,21 @@ const Meditation = () => {
                 spacing={2}
                 className={classes.lowerPaper}
               >
-                <Grid item xs={12} md={6}>
-                  <DailyJournal />
+                <Grid item xs={12} sm={6}>
+                  {isMobile ? (
+                    <ProgressMobile />
+                  ) : (
+                    <Progress />
+                  )}
                 </Grid>
-                <Grid item xs={12} md={6}>
+                <Grid item xs={12} sm={6}>
                   <Ambience />
                 </Grid>
               </Grid>
             </div>
           </Paper>
         </Grid>
-        <Grid item xs={1} md={1} />
+        <Grid item xs={1} md={2} />
       </Grid>
     </div>
   );

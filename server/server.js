@@ -4,6 +4,7 @@ const path = require('path');
 // const MongoStore = require('connect-mongo')(session);
 const mongoose = require('mongoose');
 const MongoDBStore = require('connect-mongodb-session')(session);
+const expressStaticGzip = require('express-static-gzip');
 const passport = require('./passport/setup.js');
 const router = express.Router();
 const cors = require('cors');
@@ -43,15 +44,26 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
-// router.all('*', (req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
-//   res.header('Access-Control-Allow-Headers', '*');
-//   next();
-// });
+router.all('*', (req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'PUT, GET, POST, DELETE, OPTIONS');
+  res.header('Access-Control-Allow-Headers', '*');
+  next();
+});
 
 // Routes
 app.use('/api/auth', require('./routes/AuthRoutes'));
+app.use('/user', require('./routes/UserRoutes'));
+app.use(
+  '/',
+  expressStaticGzip('client/dist', {
+    enableBrotli: true,
+    orderPreference: ['br'],
+    setHeaders: function (res, path) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000');
+    }
+  })
+  );
 
 app.get('/stoic-quote', async (req, res) => {
   try {
@@ -77,7 +89,6 @@ app.get('/checkauth', isAuthenticated, async (req, res) => {
     res.status(400).send('checkauth route failed: ', err);
   }
 });
-
 
 app.use(express.static(path.join(__dirname, '../dist')));
 
