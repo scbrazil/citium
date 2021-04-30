@@ -1,5 +1,13 @@
 <p align="center">
   <h1 align="center">CITIUM</h3>
+  
+  <p align="center">
+    <h3 align="center">
+      <a href="https://raw.githubusercontent.com/scbrazil/citium/main/client/src/assets/images/citium-demo.webp?raw=true">
+        Demo
+      </a>
+    </h3>
+  </p>
  
   <p align="center">
     <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp">
@@ -15,13 +23,6 @@
 </p>
 
 <div>
-    <p align="center">
-    <h3 align="center">
-      <a href="https://raw.githubusercontent.com/scbrazil/citium/main/client/src/assets/images/citium-demo.webp?raw=true">
-        Demo
-      </a>
-    </h3>
-  </p>
   
   <p>Prevent stress that destroys productivity.</p>
 
