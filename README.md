@@ -1,6 +1,6 @@
 # CITIUM
 
-The stress of endless tasks destroys productivity.
+Prevent stress that destroys productivity.
 
 Stress diminishes our ability to take on the very tasks that overwhelm us. We scatter ourselves, worried about what we did wrong and what we haven't accomplished. Citium returns you to the place you are effective: *now*.
 

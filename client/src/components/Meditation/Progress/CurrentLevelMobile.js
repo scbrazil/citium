@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 
 const CurrentLevel = () => {
-  let currentLevel = 10;
+  let currentLevel = 7;
 
   return (
     <>

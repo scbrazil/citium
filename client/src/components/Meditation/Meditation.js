@@ -12,13 +12,14 @@ const useStyles = makeStyles((theme) => ({
   root: {
     align: "center",
     height: "100vh",
+    // marginTop: '2em'
   },
   paperStyles: {
     color: "#fff",
     // backgroundColor: '#2d2d2d',
     background:
       "linear-gradient(to bottom right, rgba(6.3, 15.5, 40.8, 0.3), 0.1%, #25262c, 97%, rgba(21.6, 18.4, 40.8, 0.3))",
-    margin: "6em 0em 2em 0em",
+    margin: "8em 0em 2em 0em",
     padding: "2em 1em 1em 1em",
     opacity: "0.97",
   },

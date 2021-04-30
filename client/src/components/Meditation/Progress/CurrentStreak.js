@@ -6,7 +6,7 @@ import { Grid, makeStyles, Typography } from "@material-ui/core";
 const CurrentStreak = () => {
   // let consecutiveDays = 3;
   const [userUpdated, setUserUpdated] = useState(false);
-  const [streak, setStreak] = useState(1);
+  const [streak, setStreak] = useState(12);
   const { user, setUser, increaseStreak } = useContext(AppContext);
   console.log("The fucking user: ", user.progress);
   // const [dummy, setDummy] = useState(user);

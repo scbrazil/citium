@@ -3,7 +3,7 @@ import React from 'react';
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 
 const CurrentStreak = () => {
-  let consecutiveDays = 5;
+  let consecutiveDays = 12;
 
   return (
     <>
