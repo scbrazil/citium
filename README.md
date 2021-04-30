@@ -2,9 +2,11 @@
   <h1 align="center">CITIUM</h3>
   
   <p align="center">
-    <a href="https://raw.githubusercontent.com/scbrazil/citium/main/client/src/assets/images/citium-demo.webp?raw=true">
-      Demo
-    </a>  
+    <h2>
+      <a href="https://raw.githubusercontent.com/scbrazil/citium/main/client/src/assets/images/citium-demo.webp?raw=true">
+        Demo
+      </a>
+    </h2>
   </p>
   
   <p align="center">
