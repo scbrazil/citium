@@ -72,7 +72,7 @@
   <tr>
     <td>Databases</td>
     <td>
-      <img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white" /> </td>
+      <img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white" />
       <img alt="Mongoose" src="https://img.shields.io/badge/Mongoose-8B0000.svg?&style=for-the-badge" />
     </td>
   </tr>
