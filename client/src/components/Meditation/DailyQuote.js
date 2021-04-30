@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Card, Grid, makeStyles, Paper, Typography } from '@material-ui/core';
-import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import { Card, Grid, makeStyles, Paper, Typography } from "@material-ui/core";
+import axios from "axios";
 
 const useStyles = makeStyles((theme) => ({
   // root: {
@@ -23,23 +23,23 @@ const useStyles = makeStyles((theme) => ({
   //   // textAlign: 'center',
   // },
   quoteText: {
-    color: '#ffffff',
-    fontSize: [17, '!important'],
-    alignText: 'center'
+    color: "#ffffff",
+    fontSize: [17, "!important"],
+    // alignText: "center",
   },
   authorText: {
-    color: '#ffffff',
-    fontSize: [16, '!important'],
-    fontStyle: 'italic',
-    textAlign: 'right',
-    paddingTop: '0.3em',
-    paddingRight: '8em',
+    color: "#ffffff",
+    fontSize: [16, "!important"],
+    fontStyle: "italic",
+    textAlign: "right",
+    paddingTop: "0.3em",
+    paddingRight: "1em",
   },
 }));
 
 const DailyQuote = () => {
   const classes = useStyles();
-  const [dailyQuote, setDailyQuote] = useState('');
+  const [dailyQuote, setDailyQuote] = useState("");
   const [error, setError] = useState(null);
   const [mostWanted, setMostWanted] = useState([]);
 
@@ -49,7 +49,7 @@ const DailyQuote = () => {
 
   async function getQuote() {
     try {
-      const res = await axios.get('/stoic-quote');
+      const res = await axios.get("/stoic-quote");
       setDailyQuote(res.data);
     } catch (error) {
       console.log(error);
@@ -59,21 +59,23 @@ const DailyQuote = () => {
 
   return (
     <div className={classes.root}>
-      {/* <Card className={classes.cardStyles}> */}
-      <div className={classes.quoteText}>
-        <Typography
-          // className={classes.quoteText}
-          variant='h6'
-          align='center'
-          // lineHeight='50px'
-        >
-          {dailyQuote.text}
-        </Typography>
-      </div>
-      <Typography className={classes.authorText} variant='subtitle1'>
-        - {dailyQuote.author}
-      </Typography>
-      {/* </Card> */}
+      <Grid container>
+        <Grid item xs={1} />
+        <Grid item xs={10}>
+          <div className={classes.quoteText}>
+            <Typography
+              align="center"
+              fontSize="20px"
+            >
+              {dailyQuote.text}
+            </Typography>
+          </div>
+          <Typography className={classes.authorText} style={{ fontSize: '16px' }}>
+            - {dailyQuote.author}
+          </Typography>
+        </Grid>
+        <Grid item xs={1} />
+      </Grid>
     </div>
   );
 };

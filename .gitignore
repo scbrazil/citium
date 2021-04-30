@@ -1,5 +1,18 @@
+# dependencies
 node_modules
 node_modules/
+
+# bundle
+dist/
+dist/**
+dist/bundle.js
+dist/index.html
+dist/img/**
+dist/img/rome-evening-1-lg__1sLm3.jpg
+dist/img/rome-evening-1-md__3KQLP.jpg
+dist/img/zeno-citium-bust3__tCp3T.webp
+client/src/assets/images/Citium_files/**
+client/src/assets/images/Citium.html
 
 # misc
 .env

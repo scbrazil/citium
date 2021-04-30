@@ -96,7 +96,6 @@ const JournalForm = (props) => {
     // submissionStatus(true);
     localStorage.setItem('journalEntry', submittedEntry);
     history.push('/meditation');
-    // setAnchorEl(null);
   };
 
   const handleInputChange = (e) => {
@@ -161,17 +160,19 @@ const JournalForm = (props) => {
               >
                 Clear
               </Button>
-              <Typography
+              {/* <Typography
                 variant="caption"
                 style={{ fontSize: "14px", marginLeft: "0.7em" }}
               >
                 Login to Save
-              </Typography>
-              <div style={{ paddingLeft: "16em" }}>
+              </Typography> */}
+              <div style={{ paddingLeft: '0.5em'}}>
                 {charactersLeft > 0 ? (
-                  <Typography>{charactersLeft} characters remaining</Typography>
+                  <Typography style={{ fontSize: '16px' }}>
+                    {charactersLeft} characters remaining
+                  </Typography>
                 ) : (
-                  <Typography style={{ color: "red" }}>
+                  <Typography style={{ color: "red", fontSize: '16px' }}>
                     {charactersLeft} characters remaining
                   </Typography>
                 )}

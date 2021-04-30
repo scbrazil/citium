@@ -33,7 +33,7 @@ const App = () => {
   const classes = useStyles();
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const { loginDialog, showSplash } = useContext(AppContext);
-  const user = useContext(AuthContext);
+  // const user = useContext(AuthContext);
 
   return showSplash ? (
     <div
@@ -53,8 +53,6 @@ const App = () => {
     >
       <Router>
         <Fragment>
-          {/* <ThemeProvider theme={Theme}> */}
-          {/* <CssBaseline /> */}
           <div className={classes.navBar}>
             <NavBar />
           </div>

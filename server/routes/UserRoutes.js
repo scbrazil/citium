@@ -1,4 +1,5 @@
 const router = require('express').Router();
+require('dotenv').config();
 
 // @desc    Display all users
 // @route   get /user/all
@@ -16,24 +17,37 @@ router.get('/all', async (req, res) => {
 // @desc    Get user by id
 // @route   GET /users/:id
 // @access  Public
+// router.get('/:id', async (req, res) => {
+//   try {
+//     const user = await User.findById(req.params.id).populate(['email', 'firstName', 'lastName', 'journalEntries', 'favoriteQuotes']);
+
+//     res.json(user);
+//   } catch (err) {
+//     res.status(404).send(err);
+//   }
+// });
+
+// @desc    Get user by id
+// @route   GET /user/:id
+// @access  Public
 router.get('/:id', async (req, res) => {
   try {
-    const user = await User.findById(req.params.id).populate(['email', 'firstName', 'lastName', 'journalEntries', 'favoriteQuotes']);
+    const user = await User.findById(req.params.id);
 
-    res.json(user);
+    res.send(user);
   } catch (err) {
     res.status(404).send(err);
   }
-});
+})
 
-// @desc    Get
-// @route   GET /bookclub/:id
-// @access  Public
+
 
 
 // @desc    Create new user
 // @route   POST /user
 // @access  Private
 router.post('/user', async (req, res) => {
-  const { }
+  // const { }
 })
+
+module.exports = router;
