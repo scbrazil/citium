@@ -7,7 +7,7 @@
     </a>  
   </p>
   
-  <p align="center>
+  <p align="center">
     <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp">
       <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp?raw=true" width="115" height="250" />
     </a>
