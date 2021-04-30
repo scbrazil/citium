@@ -7,14 +7,14 @@
     </a>  
   </p>
   <p align="center>
-    <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp">
-      <img srchttps://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp?raw=true" width="125" height="270" />
-    </a>
     <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-splash.webp">
-      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-splash.webp?raw=true" width="500" height="270" />
+      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-splash.webp?raw=true" width="400" height="250" />
+    </a>
+    <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp">
+      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp?raw=true" width="115" height="250" />
     </a>
     <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-med.webp">
-      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-med.webp?raw=true" width="500" height="270" />
+      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-med.webp?raw=true" width="400" height="250" />
     </a>
   </p>
 </p>
