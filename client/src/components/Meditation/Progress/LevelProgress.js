@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react';
+import { AppContext } from "../../../context/context.js";
 import { Grid, makeStyles, Typography } from '@material-ui/core';
 import {
   buildStyles,
@@ -9,18 +10,6 @@ import 'react-circular-progressbar/dist/styles.css';
 
 const LevelProgress = () => {
   let percentage = 65;
-  let [level, setLevel] = useState(null);
-
-  useEffect(() => {
-    if (user.progress.totalDays % 7 === 0) {
-      setLevel(user.progress.level++)
-    }
-  }, [user]);
-
-  // Invoked context function increasing level in DB
-  const levelChecker = () => {
-
-  }
 
   return (
     <>
