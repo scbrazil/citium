@@ -1,14 +1,6 @@
 <p align="center">
   <h1 align="center">CITIUM</h3>
-  
-  <p align="center">
-    <h2>
-      <a href="https://raw.githubusercontent.com/scbrazil/citium/main/client/src/assets/images/citium-demo.webp?raw=true">
-        Demo
-      </a>
-    </h2>
-  </p>
-  
+ 
   <p align="center">
     <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp">
       <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp?raw=true" width="115" height="250" />
@@ -23,6 +15,14 @@
 </p>
 
 <div>
+    <p align="center">
+    <h3 align="center">
+      <a href="https://raw.githubusercontent.com/scbrazil/citium/main/client/src/assets/images/citium-demo.webp?raw=true">
+        Demo
+      </a>
+    </h3>
+  </p>
+  
   <p>Prevent stress that destroys productivity.</p>
 
   <p>Stress diminishes our ability to take on the very tasks that overwhelm us. We scatter ourselves, worried about what we did wrong and what we haven't accomplished. Citium returns you to the place you are effective: *now*.</p>
