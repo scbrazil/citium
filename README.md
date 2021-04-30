@@ -6,15 +6,16 @@
       Demo
     </a>  
   </p>
+  
   <p align="center>
-    <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-splash.webp">
-      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-splash.webp?raw=true" width="400" height="250" />
-    </a>
     <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp">
       <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/mobile-med.webp?raw=true" width="115" height="250" />
     </a>
-    <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-med.webp">
-      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-med.webp?raw=true" width="400" height="250" />
+    <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-splash.webp">
+      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-splash.webp?raw=true" width="400" height="250" />
+    </a>
+    <a href="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-journal.webp">
+      <img src="https://raw.githubusercontent.com/scbrazil/citium/main/docs/desktop-journal.webp" width="400" height="250" />
     </a>
   </p>
 </p>
