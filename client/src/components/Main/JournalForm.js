@@ -126,7 +126,7 @@ const JournalForm = (props) => {
               multiline
               fullWidth
               rows="10"
-              placeholder="Write a short entry to focus during your meditation."
+              placeholder="What are your thoughts?"
               inputProps={{
                 className: classes.textBox,
                 maxLength: 500,

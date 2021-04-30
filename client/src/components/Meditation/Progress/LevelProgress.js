@@ -9,7 +9,7 @@ import {
 import 'react-circular-progressbar/dist/styles.css';
 
 const LevelProgress = () => {
-  let percentage = 65;
+  let percentage = 71;
 
   return (
     <>

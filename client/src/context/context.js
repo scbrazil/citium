@@ -12,7 +12,7 @@ export const AppProvider = ({ children }) => {
   const [openLogin, setOpenLogin] = useState(false);
   const [loginDialog, setLoginDialog] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  const [showSplash, setShowSplash] = useState(false);
+  const [showSplash, setShowSplash] = useState(true);
   const isMobile = useMediaQuery(Theme.breakpoints.down('xs'));
   const [dumb, setDumb] = useState(dummy);
   const [user, setUser] = useState({});
