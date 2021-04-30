@@ -1,4 +1,4 @@
-# Citium
+# CITIUM
 
 The stress of endless tasks destroys productivity.
 
