@@ -65,20 +65,20 @@
     <td>
       <img alt="React" src="https://img.shields.io/badge/react%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
       <img alt="Express.js" src="https://img.shields.io/badge/express.js%20-%23404d59.svg?&style=for-the-badge"/>
-      <img alt="Bootstrap" src="https://img.shields.io/badge/material-ui%20-%23563D7C.svg?&style=for-the-badge&logo=material-ui&logoColor=white"/>
+      <img alt="Material-UI" src="https://img.shields.io/badge/materialUI%20-%23563D7C.svg?&style=for-the-badge&logo=material-ui&logoColor=white"/>
+      <img alt="Material-UI" src="https://img.shields.io/badge/Passport.js%20-%00FA9A.svg?&style=for-the-badge&logo=passport&logoColor=white"/>
+      
+      00FA9A
     </td>
   </tr>
   <tr>
     <td>Hosting</td>
-    <td><img alt="AWS" src="https://img.shields.io/badge/AWS%20-%23FF9900.svg?&style=for-the-badge&logo=amazon-aws&logoColor=white"/> </td>
+
   </tr>
   <tr>
     <td>Databases</td>
     <td><img alt="MongoDB" src ="https://img.shields.io/badge/MongoDB-%234ea94b.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/> </td>
-  </tr>
-  <tr>
-    <td>Testing</td>
-    <td><img alt="Jest" src="https://img.shields.io/badge/-jest-%23C21325?&style=for-the-badge&logo=jest&logoColor=white"/></td>
+    <td><img alt="Mongoose" src="https://img.shields.io/badge/Mongoose%20-%23FF9900.svg?&style=for-the-badge&logo=mongoose&logoColor=white"/> </td>
   </tr>
 </table>
 </div>
